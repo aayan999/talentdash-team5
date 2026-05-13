@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "company": "TCS",
+    "role": "SDE-1",
+    "level": "C3",
+    "location": "Bangalore",
+    "salary": "18 LPA",
+    "skills": ["ReactJS", "NodeJS"],
+    "workModel": "WFH"
+  },
+  {
+    "id": 2,
+    "company": "Infosys Ltd",
+    "role": "ASE",
+    "level": "JL4",
+    "location": "Gurgaon",
+    "salary": "Fixed Pay + Joining Bonus",
+    "skills": ["Gen AI", "ML"],
+    "workModel": "Hybrid 3 Days"
+  },
+  {
+    "id": 3,
+    "company": "Meta Facebook",
+    "role": "Frontend Dev",
+    "level": "E4",
+    "location": "Hyderabad",
+    "salary": "Base + Stocks",
+    "skills": ["ReactJS"],
+    "workModel": "Office First"
+  },
+  {
+    "id": 4,
+    "company": "Google India",
+    "role": "Backend Dev",
+    "level": "L3",
+    "location": "Bangalore",
+    "salary": "Total Compensation + RSU",
+    "skills": ["LLM", "NodeJS"],
+    "workModel": "Permanent WFH"
+  },
+  {
+    "id": 5,
+    "company": "Razorpay",
+    "role": "Full Stack Dev",
+    "level": "SDE-1",
+    "location": "Remote India",
+    "salary": "18 LPA + ESOP",
+    "skills": ["ReactJS", "NodeJS"],
+    "workModel": "WFH"
+  },
+  {
+    "id": 6,
+    "company": "Atlassian",
+    "role": "PM",
+    "level": "L3",
+    "location": "Noida NCR",
+    "salary": "Fixed Pay",
+    "skills": ["Product Management"],
+    "workModel": "WFH"
+  }
+]

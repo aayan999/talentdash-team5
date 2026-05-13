@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "company": "Tata Consultancy Services",
+    "role": "Software Engineer I",
+    "level": "Career Level C3",
+    "location": "Bengaluru",
+    "salary": "18 LPA",
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "workModel": "Remote",
+    "jobFamily": "Engineering",
+    "companyTier": "Enterprise IT Services (WITCH)",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 2,
+    "company": "Infosys",
+    "role": "Associate Software Engineer",
+    "level": "Job Level 4",
+    "location": "Gurugram",
+    "salary": "Fixed Pay + Joining Bonus",
+    "skills": [
+      "Generative AI",
+      "Machine Learning"
+    ],
+    "workModel": "Hybrid",
+    "jobFamily": "Engineering",
+    "companyTier": "Enterprise IT Services (WITCH)",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 3,
+    "company": "Meta",
+    "role": "Frontend Engineer",
+    "level": "Mid-Level Engineer",
+    "location": "Hyderabad",
+    "salary": "Base + Stocks",
+    "skills": [
+      "React"
+    ],
+    "workModel": "Onsite",
+    "jobFamily": "Engineering",
+    "companyTier": "Tier 1 - Big Tech (MANG)",
+    "isRemoteFriendly": false
+  },
+  {
+    "id": 4,
+    "company": "Google",
+    "role": "Backend Engineer",
+    "level": "Level 3",
+    "location": "Bengaluru",
+    "salary": "Total Compensation + RSU",
+    "skills": [
+      "Large Language Models",
+      "Node.js"
+    ],
+    "workModel": "Remote",
+    "jobFamily": "Engineering",
+    "companyTier": "Tier 1 - Big Tech (MANG)",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 5,
+    "company": "Razorpay",
+    "role": "Full Stack Engineer",
+    "level": "SDE-1",
+    "location": "Remote",
+    "salary": "18 LPA + ESOP",
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "workModel": "Remote",
+    "jobFamily": "Engineering",
+    "companyTier": "Tier 1 - Product / Unicorn",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 6,
+    "company": "Atlassian",
+    "role": "Product Manager",
+    "level": "Level 3",
+    "location": "Noida",
+    "salary": "Fixed Pay",
+    "skills": [
+      "Product Management"
+    ],
+    "workModel": "Remote",
+    "jobFamily": "Product Management",
+    "companyTier": "Tier 1 - Product / Unicorn",
+    "isRemoteFriendly": true
+  }
+]
