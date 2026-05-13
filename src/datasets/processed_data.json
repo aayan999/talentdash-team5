@@ -92,5 +92,37 @@
     "jobFamily": "Product Management",
     "companyTier": "Tier 1 - Product / Unicorn",
     "isRemoteFriendly": true
+  },
+  {
+    "id": 9,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "Bengaluru",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid",
+    "jobFamily": "Other",
+    "companyTier": "Other",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 10,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid",
+    "jobFamily": "Engineering",
+    "companyTier": "Other",
+    "isRemoteFriendly": true
   }
 ]
