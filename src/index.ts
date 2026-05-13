@@ -29,11 +29,11 @@ console.log("\nStep 2: Classifying taxonomy groupings...");
 const finalData = classifier.classifyDataset(deduplicatedData);
 
 // 5. Output Results
-console.log("\n=== ✅ Pipeline Execution Complete ===\n");
+console.log("\n=== Pipeline Execution Complete ===\n");
 console.log("Sample Output (First 2 Records):");
 console.log(JSON.stringify(finalData.slice(0, 2), null, 2));
 
 // Save output
 const outputPath = path.join(__dirname, 'datasets', 'processed_data.json');
 fs.writeFileSync(outputPath, JSON.stringify(finalData, null, 2));
-console.log(`\n✅ Processed dataset saved successfully to: ${outputPath}\n`);
+console.log(`\n Processed dataset saved successfully to: ${outputPath}\n`);
