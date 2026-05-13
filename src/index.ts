@@ -8,7 +8,7 @@ import { TaxonomyClassifier } from './taxonomy/classifier';
 const rawDataPath = path.join(__dirname, 'datasets', 'raw_data.json');
 const rawData = JSON.parse(fs.readFileSync(rawDataPath, 'utf8'));
 
-console.log("=== 🚀 Starting Team 5 Data Normalization Pipeline ===\n");
+console.log("=== Starting Team 5 Data Normalization Pipeline ===\n");
 console.log(`Loaded ${rawData.length} raw records from ${rawDataPath}\n`);
 
 // 2. Initialize Pipeline Modules
