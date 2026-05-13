@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { DataNormalizer } from './normalization/normalizer';
+import { DataDeduplicator } from './deduplication/deduplicator';
 import { TaxonomyClassifier } from './taxonomy/classifier';
 
 // 1. Load Raw Dataset
@@ -12,15 +13,20 @@ console.log(`Loaded ${rawData.length} raw records from ${rawDataPath}\n`);
 
 // 2. Initialize Pipeline Modules
 const normalizer = new DataNormalizer();
+const deduplicator = new DataDeduplicator();
 const classifier = new TaxonomyClassifier();
 
 // 3. Step 1: Normalize
 console.log("Step 1: Normalizing aliases to canonical names...");
 const normalizedData = normalizer.normalizeDataset(rawData);
 
-// 4. Step 2: Taxonomy Classification
-console.log("Step 2: Classifying taxonomy groupings...");
-const finalData = classifier.classifyDataset(normalizedData);
+// 4. Step 1.5: Deduplication
+console.log("\nStep 1.5: Deduplicating normalized records...");
+const deduplicatedData = deduplicator.deduplicateDataset(normalizedData);
+
+// 5. Step 2: Taxonomy Classification
+console.log("\nStep 2: Classifying taxonomy groupings...");
+const finalData = classifier.classifyDataset(deduplicatedData);
 
 // 5. Output Results
 console.log("\n=== ✅ Pipeline Execution Complete ===\n");

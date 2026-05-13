@@ -58,5 +58,25 @@
     "salary": "Fixed Pay",
     "skills": ["Product Management"],
     "workModel": "WFH"
+  },
+  {
+    "id": 7,
+    "company": "Tata Consultancy",
+    "role": "SDE-1",
+    "level": "C3",
+    "location": "Bengaluru",
+    "salary": "18 LPA",
+    "skills": ["React"],
+    "workModel": "WFH"
+  },
+  {
+    "id": 8,
+    "company": "Infy",
+    "role": "ASE",
+    "level": "JL4",
+    "location": "Gurugram",
+    "salary": "Fixed Pay + Joining Bonus",
+    "skills": ["Gen AI", "Machine Learning"],
+    "workModel": "Hybrid"
   }
 ]
