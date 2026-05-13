@@ -372,5 +372,31 @@
       "TypeScript"
     ],
     "workModel": "Hybrid"
+  },
+  {
+    "id": 27,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 28,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
   }
 ]

@@ -50,7 +50,13 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Enterprise IT Services (WITCH)",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 2,
@@ -103,7 +109,13 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Enterprise IT Services (WITCH)",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 3,
@@ -151,7 +163,13 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Big Tech (MANG)",
-    "isRemoteFriendly": false
+    "isRemoteFriendly": false,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 4,
@@ -204,7 +222,13 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Big Tech (MANG)",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 5,
@@ -257,7 +281,13 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Product / Unicorn",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 6,
@@ -305,7 +335,13 @@
     },
     "jobFamily": "Product Management",
     "companyTier": "Tier 1 - Product / Unicorn",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 9,
@@ -344,8 +380,8 @@
     ],
     "workModel": {
       "value": "Hybrid",
-      "confidenceScore": 0,
-      "matchType": "fallback"
+      "confidenceScore": 1,
+      "matchType": "exact"
     },
     "parsedCompensation": {
       "baseSalary": 1200000,
@@ -358,7 +394,13 @@
     },
     "jobFamily": "Other",
     "companyTier": "Other",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   },
   {
     "id": 10,
@@ -397,8 +439,8 @@
     ],
     "workModel": {
       "value": "Hybrid",
-      "confidenceScore": 0,
-      "matchType": "fallback"
+      "confidenceScore": 1,
+      "matchType": "exact"
     },
     "parsedCompensation": {
       "baseSalary": null,
@@ -411,165 +453,12 @@
     },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Big Tech (MANG)",
-    "isRemoteFriendly": true
-  },
-  {
-    "id": 19,
-    "company": {
-      "value": "Tata consultncy srvices",
-      "confidenceScore": 0,
-      "matchType": "fallback"
-    },
-    "role": {
-      "value": "Software Engineer I",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "level": {
-      "value": "Career Level C3",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "location": {
-      "value": "Bengaluru",
-      "confidenceScore": 0.75,
-      "matchType": "fuzzy"
-    },
-    "salary": "18 LPA",
-    "skills": [
-      {
-        "value": "React",
-        "confidenceScore": 1,
-        "matchType": "fuzzy"
-      },
-      {
-        "value": "Node.js",
-        "confidenceScore": 1,
-        "matchType": "exact"
-      }
-    ],
-    "workModel": {
-      "value": "Remote",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "parsedCompensation": {
-      "baseSalary": 1800000,
-      "currency": "INR",
-      "bonusIncluded": false,
-      "equityIncluded": false,
-      "salaryType": "Annual",
-      "confidenceScore": 0.95,
-      "rawSalary": "18 LPA"
-    },
-    "jobFamily": "Engineering",
-    "companyTier": "Other",
-    "isRemoteFriendly": true
-  },
-  {
-    "id": 20,
-    "company": {
-      "value": "Infosis",
-      "confidenceScore": 0,
-      "matchType": "fallback"
-    },
-    "role": {
-      "value": "Associate Software Engineer",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "level": {
-      "value": "Job Level 4",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "location": {
-      "value": "Gurugram",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "salary": "Fixed Pay + Joining Bonus",
-    "skills": [
-      {
-        "value": "Generative AI",
-        "confidenceScore": 1,
-        "matchType": "exact"
-      },
-      {
-        "value": "Machine Learning",
-        "confidenceScore": 1,
-        "matchType": "exact"
-      }
-    ],
-    "workModel": {
-      "value": "Hybrid",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "parsedCompensation": {
-      "baseSalary": null,
-      "currency": "INR",
-      "bonusIncluded": true,
-      "equityIncluded": false,
-      "salaryType": "Unknown",
-      "confidenceScore": 0.5,
-      "rawSalary": "Fixed Pay + Joining Bonus"
-    },
-    "jobFamily": "Engineering",
-    "companyTier": "Other",
-    "isRemoteFriendly": true
-  },
-  {
-    "id": 21,
-    "company": {
-      "value": "Gooogle",
-      "confidenceScore": 0,
-      "matchType": "fallback"
-    },
-    "role": {
-      "value": "Backend Engineer",
-      "confidenceScore": 0,
-      "matchType": "fallback"
-    },
-    "level": {
-      "value": "Level 3",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "location": {
-      "value": "Bengaluru",
-      "confidenceScore": 0.75,
-      "matchType": "fuzzy"
-    },
-    "salary": "Total Compensation + RSU",
-    "skills": [
-      {
-        "value": "Large Language Models",
-        "confidenceScore": 1,
-        "matchType": "exact"
-      },
-      {
-        "value": "Node.js",
-        "confidenceScore": 1,
-        "matchType": "exact"
-      }
-    ],
-    "workModel": {
-      "value": "Remote",
-      "confidenceScore": 1,
-      "matchType": "exact"
-    },
-    "parsedCompensation": {
-      "baseSalary": null,
-      "currency": "INR",
-      "bonusIncluded": false,
-      "equityIncluded": true,
-      "salaryType": "Unknown",
-      "confidenceScore": 0.5,
-      "rawSalary": "Total Compensation + RSU"
-    },
-    "jobFamily": "Engineering",
-    "companyTier": "Other",
-    "isRemoteFriendly": true
+    "isRemoteFriendly": true,
+    "metadata": {
+      "source": "crawler",
+      "crawlTimestamp": "2026-05-13T19:21:58.986Z",
+      "pipelineVersion": "v1.2",
+      "ingestionBatchId": "batch_x5m63nh"
+    }
   }
 ]

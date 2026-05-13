@@ -8,7 +8,13 @@ import { TaxonomyClassifier } from './taxonomy/classifier';
 import { WorkforceSignalExtractor } from './signals/workforceSignalExtractor';
 
 async function runPipeline() {
-    console.log("=== Starting Team 5 Data Normalization Pipeline ===\n");
+    const startTime = Date.now();
+    const batchId = `batch_${Math.random().toString(36).substring(2, 9)}`;
+    const crawlTimestamp = new Date().toISOString();
+
+    console.log(`=== Starting Team 5 Data Normalization Pipeline ===`);
+    console.log(`[Pipeline] Session ID: ${batchId}`);
+    console.log(`[Pipeline] Time: ${crawlTimestamp}\n`);
 
     // Grab the URL from command line arguments, or fallback to our example
     const targetUrl = process.argv[2] || 'https://example.com/jobs';
@@ -52,10 +58,23 @@ async function runPipeline() {
 
     // 7. Step 2: Taxonomy Classification
     console.log("\nStep 2: Classifying taxonomy groupings...");
-    const finalData = classifier.classifyDataset(parsedData);
+    const classifiedData = classifier.classifyDataset(parsedData);
+
+    // 7.5: Metadata & Historical Snapshot Layer
+    console.log("\nStep 2.5: Generating metadata layer...");
+    const finalData = classifiedData.map(record => ({
+        ...record,
+        metadata: {
+            source: "crawler",
+            crawlTimestamp: crawlTimestamp,
+            pipelineVersion: "v1.2",
+            ingestionBatchId: batchId
+        }
+    }));
 
     // 8. Output Results
-    console.log("\n=== Pipeline Execution Complete ===\n");
+    const durationMs = Date.now() - startTime;
+    console.log(`\n=== Pipeline Execution Complete (${durationMs}ms) ===\n`);
     console.log("Sample Output (Last 2 Jobs):");
     console.log(JSON.stringify(finalData.slice(-2), null, 2));
 

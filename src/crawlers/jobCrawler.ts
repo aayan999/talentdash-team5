@@ -46,29 +46,40 @@ export class JobCrawler {
 
             console.log(`[Crawler] Successfully extracted ${extractedJobs.length} job cards.`);
 
-            // If we didn't find any (because it's a dummy run), let's inject some realistic mock data
-            // to demonstrate the pipeline flow without needing a live, perfectly formatted site.
-            let newRecords: Partial<RawDataRecord>[] = extractedJobs;
-            if (extractedJobs.length === 0) {
-                console.log('[Crawler] No elements found with ".job-card". Generating fallback data...');
-                newRecords = [
-                    {
-                        company: "Wipro Technologies",
-                        role: "Software Dev",
-                        location: "BLR",
-                        salary: "12 LPA"
-                    },
-                    {
-                        company: "Amazon Development Centre",
-                        role: "SDE 2",
-                        location: "Hyderabad",
-                        salary: "Base + RSU"
-                    }
-                ];
+            // 4. Read existing data to determine the next ID
+            let existingData: RawDataRecord[] = [];
+            if (fs.existsSync(this.rawDataPath)) {
+                existingData = JSON.parse(fs.readFileSync(this.rawDataPath, 'utf8'));
             }
 
-            // 4. Read existing data to determine the next ID
-            const existingData: RawDataRecord[] = JSON.parse(fs.readFileSync(this.rawDataPath, 'utf8'));
+            // If we didn't find any (because it's a dummy run), let's inject some realistic mock data
+            let newRecords: Partial<RawDataRecord>[] = extractedJobs;
+            if (extractedJobs.length === 0) {
+                const alreadyHasFallback = existingData.some(r => r.company === "Wipro Technologies" && r.salary === "12 LPA");
+                if (alreadyHasFallback) {
+                    console.log('[Crawler] Warning: Fallback data already exists in raw_data.json.');
+                    console.log('[Crawler] Skipping duplicate ingestion to prevent exploding duplicate counts.');
+                    newRecords = [];
+                } else {
+                    console.log('[Crawler] No elements found with ".job-card". Generating fallback data...');
+                    newRecords = [
+                        {
+                            company: "Wipro Technologies",
+                            role: "Software Dev",
+                            location: "BLR",
+                            salary: "12 LPA"
+                        },
+                        {
+                            company: "Amazon Development Centre",
+                            role: "SDE 2",
+                            location: "Hyderabad",
+                            salary: "Base + RSU"
+                        }
+                    ];
+                }
+            }
+
+            // 4. Calculate max ID from existing data
             const maxId = existingData.reduce((max, record) => Math.max(max, record.id), 0);
 
             // 5. Format extracted data into our RawDataRecord shape

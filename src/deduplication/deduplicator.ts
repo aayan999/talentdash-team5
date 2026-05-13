@@ -1,4 +1,5 @@
 import { NormalizedDataRecord } from "../normalization/normalizer";
+import { getFieldValue } from "../utils/recordUtils";
 
 /**
  * Pipeline step 1.5: Deduplication
@@ -18,9 +19,9 @@ export class DataDeduplicator {
      * Generates a unique fingerprint for a record based on key fields.
      */
     private generateFingerprint(record: NormalizedDataRecord): string {
-        const company = record.company.value || "";
-        const role = record.role.value || "";
-        const location = record.location.value || "";
+        const company = getFieldValue(record.company);
+        const role = getFieldValue(record.role);
+        const location = getFieldValue(record.location);
         const salary = record.salary || "";
 
         // Combine fields, convert to lowercase, and remove all whitespace

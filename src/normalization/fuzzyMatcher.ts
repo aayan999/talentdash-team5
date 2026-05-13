@@ -62,7 +62,7 @@ export function findBestMatch(rawValue: string, mapping: Record<string, string>)
 
     // 1. Exact Match Check (O(N) but fast)
     for (const [alias, canonical] of Object.entries(mapping)) {
-        if (cleanString(alias) === cleanedRaw) {
+        if (cleanString(alias) === cleanedRaw || cleanString(canonical) === cleanedRaw) {
             return { value: canonical, confidenceScore: 1.0, matchType: "exact" };
         }
     }
@@ -72,15 +72,20 @@ export function findBestMatch(rawValue: string, mapping: Record<string, string>)
     let highestScore = 0;
 
     for (const [alias, canonical] of Object.entries(mapping)) {
-        const score = calculateSimilarity(cleanedRaw, alias);
-        if (score > highestScore) {
-            highestScore = score;
+        // Compare against both the alias AND the canonical name (e.g. Infosis vs Infosys)
+        const scoreAlias = calculateSimilarity(cleanedRaw, alias);
+        const scoreCanonical = calculateSimilarity(cleanedRaw, canonical);
+        
+        const bestLocalScore = Math.max(scoreAlias, scoreCanonical);
+
+        if (bestLocalScore > highestScore) {
+            highestScore = bestLocalScore;
             bestMatch = canonical;
         }
     }
 
     // Threshold for accepting a fuzzy match
-    if (highestScore >= 0.75) {
+    if (highestScore >= 0.70) {
         return {
             value: bestMatch,
             confidenceScore: parseFloat(highestScore.toFixed(2)),

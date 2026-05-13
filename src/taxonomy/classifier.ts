@@ -1,4 +1,5 @@
 import { NormalizedDataRecord } from "../normalization/normalizer";
+import { getFieldValue } from "../utils/recordUtils";
 
 export interface TaxonomyEnrichedRecord extends NormalizedDataRecord {
     jobFamily: string; // e.g., "Engineering", "Product", "Data"
@@ -38,11 +39,12 @@ export class TaxonomyClassifier {
     }
 
     public classify(record: NormalizedDataRecord): TaxonomyEnrichedRecord {
+        const workModel = getFieldValue(record.workModel);
         return {
             ...record,
-            jobFamily: this.categorizeJobFamily(record.role.value, record.skills.map(s => s.value)),
-            companyTier: this.categorizeCompanyTier(record.company.value),
-            isRemoteFriendly: record.workModel.value === "Remote" || record.workModel.value === "Hybrid"
+            jobFamily: this.categorizeJobFamily(getFieldValue(record.role), record.skills.map(s => getFieldValue(s))),
+            companyTier: this.categorizeCompanyTier(getFieldValue(record.company)),
+            isRemoteFriendly: workModel === "Remote" || workModel === "Hybrid"
         };
     }
 

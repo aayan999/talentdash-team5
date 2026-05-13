@@ -1,4 +1,5 @@
 import { NormalizedDataRecord } from "../normalization/normalizer";
+import { getFieldValue } from "../utils/recordUtils";
 
 export interface ParsedSalary {
     baseSalary: number | null;
@@ -79,7 +80,7 @@ export class SalaryParser {
 
             // Log interesting findings for debugging
             if (parsedCompensation.equityIncluded) {
-                console.log(`[SalaryParser] Detected Equity/RSUs for ID ${record.id} (${record.company.value})`);
+                console.log(`[SalaryParser] Detected Equity/RSUs for ID ${record.id} (${getFieldValue(record.company)})`);
             }
 
             return {
