@@ -6,7 +6,7 @@ import {
     workModelAliases,
     levelAliases
 } from "./rules";
-import { findCanonicalValue } from "../utils/stringUtils";
+import { findBestMatch, NormalizedField } from "./fuzzyMatcher";
 
 export interface RawDataRecord {
     id: number;
@@ -21,31 +21,37 @@ export interface RawDataRecord {
 
 export interface NormalizedDataRecord {
     id: number;
-    company: string;
-    role: string;
-    level: string | null;
-    location: string;
+    company: NormalizedField;
+    role: NormalizedField;
+    level: NormalizedField | null;
+    location: NormalizedField;
     salary: string | null;
-    skills: string[];
-    workModel: string;
+    skills: NormalizedField[];
+    workModel: NormalizedField;
 }
 
 /**
  * Pipeline step 1: Normalization
  * This normalizer converts raw user inputs (aliases, misspellings, abbreviations)
  * into canonical standard formats for downstream taxonomy & analytics.
+ * Now improved with Fuzzy Matching and Confidence Scoring!
  */
 export class DataNormalizer {
     public normalizeRecord(record: RawDataRecord): NormalizedDataRecord {
+        const companyMatch = findBestMatch(record.company, companyAliases);
+        if (companyMatch.matchType === 'fuzzy') {
+            console.log(`[Normalizer] Fuzzy match detected: "${record.company}" -> "${companyMatch.value}" (Confidence: ${companyMatch.confidenceScore})`);
+        }
+
         return {
             id: record.id,
-            company: findCanonicalValue(record.company, companyAliases),
-            role: findCanonicalValue(record.role, roleAliases),
-            level: record.level ? findCanonicalValue(record.level, levelAliases) : null,
-            location: findCanonicalValue(record.location, locationAliases),
-            salary: record.salary ? record.salary.trim() : null, // In a real system, we'd parse amounts
-            skills: record.skills.map(skill => findCanonicalValue(skill, skillAliases)),
-            workModel: findCanonicalValue(record.workModel, workModelAliases)
+            company: companyMatch,
+            role: findBestMatch(record.role, roleAliases),
+            level: record.level ? findBestMatch(record.level, levelAliases) : null,
+            location: findBestMatch(record.location, locationAliases),
+            salary: record.salary ? record.salary.trim() : null,
+            skills: record.skills.map(skill => findBestMatch(skill, skillAliases)),
+            workModel: findBestMatch(record.workModel, workModelAliases)
         };
     }
 

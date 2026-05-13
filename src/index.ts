@@ -3,7 +3,9 @@ import path from 'path';
 import { JobCrawler } from './crawlers/jobCrawler';
 import { DataNormalizer } from './normalization/normalizer';
 import { DataDeduplicator } from './deduplication/deduplicator';
+import { SalaryParser } from './parsers/salaryParser';
 import { TaxonomyClassifier } from './taxonomy/classifier';
+import { WorkforceSignalExtractor } from './signals/workforceSignalExtractor';
 
 async function runPipeline() {
     console.log("=== Starting Team 5 Data Normalization Pipeline ===\n");
@@ -18,12 +20,18 @@ async function runPipeline() {
     // 1. Load Raw Dataset (Now containing crawled data!)
     const rawDataPath = path.join(__dirname, 'datasets', 'raw_data.json');
     const rawData = JSON.parse(fs.readFileSync(rawDataPath, 'utf8'));
+    
+    const discussionsPath = path.join(__dirname, 'datasets', 'employee_discussions.json');
+    const discussionsData = JSON.parse(fs.readFileSync(discussionsPath, 'utf8'));
 
-    console.log(`\nLoaded ${rawData.length} raw records from ${rawDataPath}\n`);
+    console.log(`\nLoaded ${rawData.length} raw records from ${rawDataPath}`);
+    console.log(`Loaded ${discussionsData.length} raw discussions from ${discussionsPath}\n`);
 
     // 2. Initialize ETL Pipeline Modules
     const normalizer = new DataNormalizer();
     const deduplicator = new DataDeduplicator();
+    const salaryParser = new SalaryParser();
+    const signalExtractor = new WorkforceSignalExtractor();
     const classifier = new TaxonomyClassifier();
 
     // 3. Step 1: Normalize
@@ -34,19 +42,36 @@ async function runPipeline() {
     console.log("\nStep 1.5: Deduplicating normalized records...");
     const deduplicatedData = deduplicator.deduplicateDataset(normalizedData);
 
-    // 5. Step 2: Taxonomy Classification
-    console.log("\nStep 2: Classifying taxonomy groupings...");
-    const finalData = classifier.classifyDataset(deduplicatedData);
+    // 5. Step 1.75: Salary Parsing
+    console.log("\nStep 1.75: Parsing compensation structures...");
+    const parsedData = salaryParser.parseDataset(deduplicatedData);
 
-    // 6. Output Results
+    // 6. Step 1.85: Workforce Signal Extraction
+    console.log("\nStep 1.85: Extracting workforce signals from employee discussions...");
+    const extractedSignals = signalExtractor.processDataset(discussionsData);
+
+    // 7. Step 2: Taxonomy Classification
+    console.log("\nStep 2: Classifying taxonomy groupings...");
+    const finalData = classifier.classifyDataset(parsedData);
+
+    // 8. Output Results
     console.log("\n=== Pipeline Execution Complete ===\n");
-    console.log("Sample Output (Last 2 Records - Newly Crawled!):");
+    console.log("Sample Output (Last 2 Jobs):");
     console.log(JSON.stringify(finalData.slice(-2), null, 2));
 
-    // Save output
+    console.log("\nSample Output (First 2 Extracted Signals):");
+    console.log(JSON.stringify(extractedSignals.slice(0, 2), null, 2));
+
+    // Save outputs
     const outputPath = path.join(__dirname, 'datasets', 'processed_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(finalData, null, 2));
-    console.log(`\nProcessed dataset saved successfully to: ${outputPath}\n`);
+    
+    const signalsOutputPath = path.join(__dirname, 'datasets', 'extracted_signals.json');
+    fs.writeFileSync(signalsOutputPath, JSON.stringify(extractedSignals, null, 2));
+    
+    console.log(`\nProcessed datasets saved successfully to:`);
+    console.log(`- ${outputPath}`);
+    console.log(`- ${signalsOutputPath}\n`);
 }
 
 // Execute the pipeline

@@ -1,126 +1,573 @@
 [
   {
     "id": 1,
-    "company": "Tata Consultancy Services",
-    "role": "Software Engineer I",
-    "level": "Career Level C3",
-    "location": "Bengaluru",
+    "company": {
+      "value": "Tata Consultancy Services",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "role": {
+      "value": "Software Engineer I",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Career Level C3",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Bengaluru",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "18 LPA",
     "skills": [
-      "React",
-      "Node.js"
+      {
+        "value": "React",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Node.js",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
     ],
-    "workModel": "Remote",
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": 1800000,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": false,
+      "salaryType": "Annual",
+      "confidenceScore": 0.95,
+      "rawSalary": "18 LPA"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Enterprise IT Services (WITCH)",
     "isRemoteFriendly": true
   },
   {
     "id": 2,
-    "company": "Infosys",
-    "role": "Associate Software Engineer",
-    "level": "Job Level 4",
-    "location": "Gurugram",
+    "company": {
+      "value": "Infosys",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "role": {
+      "value": "Associate Software Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Job Level 4",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Gurugram",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "Fixed Pay + Joining Bonus",
     "skills": [
-      "Generative AI",
-      "Machine Learning"
+      {
+        "value": "Generative AI",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Machine Learning",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
     ],
-    "workModel": "Hybrid",
+    "workModel": {
+      "value": "Hybrid",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": true,
+      "equityIncluded": false,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Fixed Pay + Joining Bonus"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Enterprise IT Services (WITCH)",
     "isRemoteFriendly": true
   },
   {
     "id": 3,
-    "company": "Meta",
-    "role": "Frontend Engineer",
-    "level": "Mid-Level Engineer",
-    "location": "Hyderabad",
+    "company": {
+      "value": "Meta",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "role": {
+      "value": "Frontend Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Mid-Level Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Hyderabad",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "Base + Stocks",
     "skills": [
-      "React"
+      {
+        "value": "React",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
     ],
-    "workModel": "Onsite",
+    "workModel": {
+      "value": "Onsite",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": true,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Base + Stocks"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Big Tech (MANG)",
     "isRemoteFriendly": false
   },
   {
     "id": 4,
-    "company": "Google",
-    "role": "Backend Engineer",
-    "level": "Level 3",
-    "location": "Bengaluru",
+    "company": {
+      "value": "Google",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "role": {
+      "value": "Backend Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Level 3",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Bengaluru",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "Total Compensation + RSU",
     "skills": [
-      "Large Language Models",
-      "Node.js"
+      {
+        "value": "Large Language Models",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Node.js",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
     ],
-    "workModel": "Remote",
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": true,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Total Compensation + RSU"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Big Tech (MANG)",
     "isRemoteFriendly": true
   },
   {
     "id": 5,
-    "company": "Razorpay",
-    "role": "Full Stack Engineer",
-    "level": "SDE-1",
-    "location": "Remote",
+    "company": {
+      "value": "Razorpay",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Full Stack Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "SDE-1",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "location": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "18 LPA + ESOP",
     "skills": [
-      "React",
-      "Node.js"
+      {
+        "value": "React",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Node.js",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
     ],
-    "workModel": "Remote",
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": 1800000,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": true,
+      "salaryType": "Annual",
+      "confidenceScore": 0.95,
+      "rawSalary": "18 LPA + ESOP"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Tier 1 - Product / Unicorn",
     "isRemoteFriendly": true
   },
   {
     "id": 6,
-    "company": "Atlassian",
-    "role": "Product Manager",
-    "level": "Level 3",
-    "location": "Noida",
+    "company": {
+      "value": "Atlassian",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Product Manager",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Level 3",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Noida",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "Fixed Pay",
     "skills": [
-      "Product Management"
+      {
+        "value": "Product Management",
+        "confidenceScore": 0,
+        "matchType": "fallback"
+      }
     ],
-    "workModel": "Remote",
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": false,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Fixed Pay"
+    },
     "jobFamily": "Product Management",
     "companyTier": "Tier 1 - Product / Unicorn",
     "isRemoteFriendly": true
   },
   {
     "id": 9,
-    "company": "Wipro Technologies",
-    "role": "Software Dev",
-    "level": "Unknown",
-    "location": "Bengaluru",
+    "company": {
+      "value": "Wipro Technologies",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Software Dev",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "level": {
+      "value": "Unknown",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "location": {
+      "value": "Bengaluru",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "12 LPA",
     "skills": [
-      "JavaScript",
-      "TypeScript"
+      {
+        "value": "JavaScript",
+        "confidenceScore": 0,
+        "matchType": "fallback"
+      },
+      {
+        "value": "TypeScript",
+        "confidenceScore": 0,
+        "matchType": "fallback"
+      }
     ],
-    "workModel": "Hybrid",
+    "workModel": {
+      "value": "Hybrid",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "parsedCompensation": {
+      "baseSalary": 1200000,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": false,
+      "salaryType": "Annual",
+      "confidenceScore": 0.95,
+      "rawSalary": "12 LPA"
+    },
     "jobFamily": "Other",
     "companyTier": "Other",
     "isRemoteFriendly": true
   },
   {
     "id": 10,
-    "company": "Amazon Development Centre",
-    "role": "SDE 2",
-    "level": "Unknown",
-    "location": "Hyderabad",
+    "company": {
+      "value": "Amazon",
+      "confidenceScore": 0.91,
+      "matchType": "fuzzy"
+    },
+    "role": {
+      "value": "Software Engineer I",
+      "confidenceScore": 0.75,
+      "matchType": "fuzzy"
+    },
+    "level": {
+      "value": "Unknown",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "location": {
+      "value": "Hyderabad",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
     "salary": "Base + RSU",
     "skills": [
-      "JavaScript",
-      "TypeScript"
+      {
+        "value": "JavaScript",
+        "confidenceScore": 0,
+        "matchType": "fallback"
+      },
+      {
+        "value": "TypeScript",
+        "confidenceScore": 0,
+        "matchType": "fallback"
+      }
     ],
-    "workModel": "Hybrid",
+    "workModel": {
+      "value": "Hybrid",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": true,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Base + RSU"
+    },
+    "jobFamily": "Engineering",
+    "companyTier": "Tier 1 - Big Tech (MANG)",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 19,
+    "company": {
+      "value": "Tata consultncy srvices",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Software Engineer I",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Career Level C3",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Bengaluru",
+      "confidenceScore": 0.75,
+      "matchType": "fuzzy"
+    },
+    "salary": "18 LPA",
+    "skills": [
+      {
+        "value": "React",
+        "confidenceScore": 1,
+        "matchType": "fuzzy"
+      },
+      {
+        "value": "Node.js",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
+    ],
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": 1800000,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": false,
+      "salaryType": "Annual",
+      "confidenceScore": 0.95,
+      "rawSalary": "18 LPA"
+    },
+    "jobFamily": "Engineering",
+    "companyTier": "Other",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 20,
+    "company": {
+      "value": "Infosis",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Associate Software Engineer",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "level": {
+      "value": "Job Level 4",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Gurugram",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "salary": "Fixed Pay + Joining Bonus",
+    "skills": [
+      {
+        "value": "Generative AI",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Machine Learning",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
+    ],
+    "workModel": {
+      "value": "Hybrid",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": true,
+      "equityIncluded": false,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Fixed Pay + Joining Bonus"
+    },
+    "jobFamily": "Engineering",
+    "companyTier": "Other",
+    "isRemoteFriendly": true
+  },
+  {
+    "id": 21,
+    "company": {
+      "value": "Gooogle",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "role": {
+      "value": "Backend Engineer",
+      "confidenceScore": 0,
+      "matchType": "fallback"
+    },
+    "level": {
+      "value": "Level 3",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "location": {
+      "value": "Bengaluru",
+      "confidenceScore": 0.75,
+      "matchType": "fuzzy"
+    },
+    "salary": "Total Compensation + RSU",
+    "skills": [
+      {
+        "value": "Large Language Models",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      },
+      {
+        "value": "Node.js",
+        "confidenceScore": 1,
+        "matchType": "exact"
+      }
+    ],
+    "workModel": {
+      "value": "Remote",
+      "confidenceScore": 1,
+      "matchType": "exact"
+    },
+    "parsedCompensation": {
+      "baseSalary": null,
+      "currency": "INR",
+      "bonusIncluded": false,
+      "equityIncluded": true,
+      "salaryType": "Unknown",
+      "confidenceScore": 0.5,
+      "rawSalary": "Total Compensation + RSU"
+    },
     "jobFamily": "Engineering",
     "companyTier": "Other",
     "isRemoteFriendly": true

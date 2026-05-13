@@ -1,0 +1,65 @@
+[
+  {
+    "signalType": "Bench Pressure",
+    "confidenceScore": 0.9,
+    "severity": "High",
+    "company": "Tata Consultancy Services",
+    "normalizedCompany": true,
+    "sourceType": "Employee Discussion",
+    "rawText": "TCS has delayed appraisals again and most teams are facing heavy bench pressure."
+  },
+  {
+    "signalType": "Appraisal Delay",
+    "confidenceScore": 0.8,
+    "severity": "Medium",
+    "company": "Tata Consultancy Services",
+    "normalizedCompany": true,
+    "sourceType": "Employee Discussion",
+    "rawText": "TCS has delayed appraisals again and most teams are facing heavy bench pressure."
+  },
+  {
+    "signalType": "Hiring Freeze",
+    "confidenceScore": 0.85,
+    "severity": "High",
+    "company": "Infosys",
+    "normalizedCompany": true,
+    "sourceType": "Reddit",
+    "rawText": "Infy announced a hiring freeze for Q3. Burnout is real because they are not backfilling roles."
+  },
+  {
+    "signalType": "Burnout",
+    "confidenceScore": 0.75,
+    "severity": "High",
+    "company": "Infosys",
+    "normalizedCompany": true,
+    "sourceType": "Reddit",
+    "rawText": "Infy announced a hiring freeze for Q3. Burnout is real because they are not backfilling roles."
+  },
+  {
+    "signalType": "Toxic Culture",
+    "confidenceScore": 0.85,
+    "severity": "Critical",
+    "company": "Amazon",
+    "normalizedCompany": true,
+    "sourceType": "Anonymous Review",
+    "rawText": "Amazon is pushing strict return to office mandates. Toxic culture is increasing."
+  },
+  {
+    "signalType": "Return To Office",
+    "confidenceScore": 0.95,
+    "severity": "Medium",
+    "company": "Amazon",
+    "normalizedCompany": true,
+    "sourceType": "Anonymous Review",
+    "rawText": "Amazon is pushing strict return to office mandates. Toxic culture is increasing."
+  },
+  {
+    "signalType": "Layoffs",
+    "confidenceScore": 0.95,
+    "severity": "Critical",
+    "company": "Unknown Company",
+    "normalizedCompany": false,
+    "sourceType": "Blind",
+    "rawText": "I heard rumors about layoffs at Razorpay due to over-hiring last year."
+  }
+]

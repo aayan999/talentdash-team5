@@ -40,9 +40,9 @@ export class TaxonomyClassifier {
     public classify(record: NormalizedDataRecord): TaxonomyEnrichedRecord {
         return {
             ...record,
-            jobFamily: this.categorizeJobFamily(record.role, record.skills),
-            companyTier: this.categorizeCompanyTier(record.company),
-            isRemoteFriendly: record.workModel === "Remote" || record.workModel === "Hybrid"
+            jobFamily: this.categorizeJobFamily(record.role.value, record.skills.map(s => s.value)),
+            companyTier: this.categorizeCompanyTier(record.company.value),
+            isRemoteFriendly: record.workModel.value === "Remote" || record.workModel.value === "Hybrid"
         };
     }
 

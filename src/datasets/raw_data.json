@@ -177,5 +177,200 @@
       "TypeScript"
     ],
     "workModel": "Hybrid"
+  },
+  {
+    "id": 15,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 16,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 17,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 18,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 19,
+    "company": "Tata consultncy srvices",
+    "role": "SDE-1",
+    "level": "C3",
+    "location": "Bangluru",
+    "salary": "18 LPA",
+    "skills": [
+      "React js",
+      "NodeJS"
+    ],
+    "workModel": "WFH"
+  },
+  {
+    "id": 20,
+    "company": "Infosis",
+    "role": "ASE",
+    "level": "JL4",
+    "location": "Gurgaon",
+    "salary": "Fixed Pay + Joining Bonus",
+    "skills": [
+      "Gen AI",
+      "ML"
+    ],
+    "workModel": "Hybrid 3 Days"
+  },
+  {
+    "id": 21,
+    "company": "Gooogle",
+    "role": "Backend Engineer",
+    "level": "L3",
+    "location": "Bangluru",
+    "salary": "Total Compensation + RSU",
+    "skills": [
+      "LLM",
+      "NodeJS"
+    ],
+    "workModel": "Permanent WFH"
+  },
+  {
+    "id": 19,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 20,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 21,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 22,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 23,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 24,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 25,
+    "company": "Wipro Technologies",
+    "role": "Software Dev",
+    "level": "Unknown",
+    "location": "BLR",
+    "salary": "12 LPA",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
+  },
+  {
+    "id": 26,
+    "company": "Amazon Development Centre",
+    "role": "SDE 2",
+    "level": "Unknown",
+    "location": "Hyderabad",
+    "salary": "Base + RSU",
+    "skills": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "workModel": "Hybrid"
   }
 ]

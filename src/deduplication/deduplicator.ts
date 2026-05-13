@@ -18,9 +18,9 @@ export class DataDeduplicator {
      * Generates a unique fingerprint for a record based on key fields.
      */
     private generateFingerprint(record: NormalizedDataRecord): string {
-        const company = record.company || "";
-        const role = record.role || "";
-        const location = record.location || "";
+        const company = record.company.value || "";
+        const role = record.role.value || "";
+        const location = record.location.value || "";
         const salary = record.salary || "";
 
         // Combine fields, convert to lowercase, and remove all whitespace
